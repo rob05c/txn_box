@@ -42,6 +42,8 @@ Part("#lib/trafficserver.part", PKG_PREFIX=ts_path, PKG_VERSION="10.0.0")
 path = GetOption("with_ssl")
 Part("#lib/openssl.part", CUSTOM_PATH=path)
 
+print(f"ts_path: XXX{ts_path}XXX\n")
+
 # The main build.
 Part("plugin/txn_box.part", package_group='txn_box')
 #Part("test/unit_tests/unit_tests.part")
